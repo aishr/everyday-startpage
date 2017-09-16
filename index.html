@@ -46,22 +46,12 @@ html {
 				</ul>
 			</ul>
         </div>
-            <!--
-			<ul class="topul">
-				<li class="topli"><a href="http://www.cs.utoronto.ca/~fidler/teaching/2017/CSC420.html">CSC420</a></li>
-				<ul class="underul">
-					<li class="underli"><a href="https://mcsmark.utm.utoronto.ca/csc420s16">MarkUs</a></li>
-				</ul>
-			</ul>
-			<ul class="topul">
-				<li class="topli"><a href="https://mcs.utm.utoronto.ca/~peters43/488/index.shtml">CSC488</a></li>
-				<ul class="underul">
-					<li class="underli"><a href="https://portal.utoronto.ca/">Marks</a></li>
-					<li class="underli"><a href="https://mcs.utm.utoronto.ca/~mybb/utmcs/forumdisplay.php">Discussion Board</a></li>
-					<li class="underli"><a href="https://mcs.utm.utoronto.ca/~peters43/488/project/index.shtml">Project</a></li>
-				</ul>
-			</ul>
-            -->
+        <div class="listdiv">
+            <form onsubmit="window.location.href = get_primewire(); return false;" autocomplete="on">
+                <input id="primewireSearch" name="primewireSearch" placeholder="Stream Search">
+            </form>
+
+        </div> 
 		<div class="wrap">
 			<form onsubmit="window.location.href = get_url(); return false;" autocomplete="on">
 				<input id="search" name="search" type="text" placeholder="Search Here!">

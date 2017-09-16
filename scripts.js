@@ -15,3 +15,8 @@ function get_url()
 {
 	return "https://google.com/search?q=" + document.getElementById("search").value.split(' ').join('+');
 }
+
+function get_primewire()
+{
+    return "http://www.primewire.ag/index.php?search_keywords=" + document.getElementById("primewireSearch").value.split(' ').join('+') + "&key=8d2666e16e24701a&search_section=2";
+}
