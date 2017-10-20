@@ -5,12 +5,6 @@
 /*@import "compass/css3";
   @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);*/
 
-html {
-	background: url(images/cat3.jpg) no-repeat center center fixed;
-	background-size: 100% auto;
-	background-repeat: repeat-y;
-	background-color: #000000;
-}
 </style>
 <html>
 	<head>
@@ -59,9 +53,13 @@ html {
 				<input id="search_submit" value="Rechercher" type="submit">
 			</form>
 		</div>
-		<div class="source">
-			<a href="https://github.com/aishr/everyday-startpage">Source</a>
-		</div>
+                <time class="clock"></time>
+                <div class="box">
+                    <div class="date">
+                        <div id="daymonth"></div>
+                        <div id="year"></div>
+                    </div>
+                </div>
 		<div id="dockContainer">
 			<ul class="osx-dock">
 				<li class="active"><a href="https://www.facebook.com/"> <img title="Facebook" src="images/fblogo.png" alt="fb" align="left" style="width:50px;height:50px;"> </a></li>
