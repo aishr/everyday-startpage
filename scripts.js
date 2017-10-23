@@ -29,7 +29,7 @@ window.onkeydown = function (e) {
 		
 function get_url()
 {
-	return "https://google.com/search?q=" + document.getElementById("search").value.split(' ').join('+');
+    return "https://google.com/search?q=" + encodeURIComponent(document.getElementById("search").value);
 }
 
 function get_primewire()
