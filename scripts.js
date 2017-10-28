@@ -34,7 +34,10 @@ var config = [
     {key: 'b99', name: 'Brooklyn Nine Nine', url: 'http://www.primewire.ag/watch-2741621-Brooklyn-Nine-Nine-online-free'},
     {key: 'f', name: 'The Flash', url: 'http://www.primewire.ag/watch-2746666-The-Flash-online-free'},
     {key: 'sh', name: 'Shadowhunters', url: 'http://www.primewire.ag/watch-2746666-The-Flash-online-free'},
-    {key: 'su', name: 'Suits', url: 'http://www.primewire.ag/watch-2724131-Suits-online-free'}
+    {key: 'su', name: 'Suits', url: 'http://www.primewire.ag/watch-2724131-Suits-online-free'},
+    {key: 'qu', name: 'Quantico', url: 'http://www.primewire.ag/watch-2768917-Quantico-online-free'},
+    {key: 'st', name: 'Stanger Things', url: 'http://www.primewire.ag/watch-2779641-Stranger-Things-online-free'},
+
 ];
 
     
