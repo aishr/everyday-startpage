@@ -43,7 +43,7 @@ function get_url()
 {
     var input = document.getElementById("search").value;
     for (var i = 0; i < config.length; i++){
-        if (input.substr(0,1) === 'p:'){
+        if (input.substr(0,2) === 'p:'){
             return "http://www.primewire.ag/index.php?search_keywords=" + encodeURIComponent(input.substr(2,input.length-1)); 
         }
         if (config[i].key === input){
