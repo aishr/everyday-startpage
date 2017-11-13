@@ -32,7 +32,7 @@ var config = [
     {key: 'rm', name: 'Rick And Morty', url: 'http://www.primewire.ag/watch-2742941-Rick-and-Morty-online-free'},
     {key: 'tbbt', name: 'The Big Bang Theory', url: 'http://www.primewire.ag/watch-9594-The-Big-Bang-Theory-online-free'},
     {key: 'b99', name: 'Brooklyn Nine Nine', url: 'http://www.primewire.ag/watch-2741621-Brooklyn-Nine-Nine-online-free'},
-    {key: 'f', name: 'The Flash', url: 'http://www.primewire.ag/watch-2746666-The-Flash-online-free'},
+    {key: 'fl', name: 'The Flash', url: 'http://www.primewire.ag/watch-2746666-The-Flash-online-free'},
     {key: 'sh', name: 'Shadowhunters', url: 'http://www.primewire.ag/watch-2746666-The-Flash-online-free'},
     {key: 'su', name: 'Suits', url: 'http://www.primewire.ag/watch-2724131-Suits-online-free'},
     {key: 'qu', name: 'Quantico', url: 'http://www.primewire.ag/watch-2768917-Quantico-online-free'},
@@ -40,25 +40,58 @@ var config = [
 
 ];
 
-    
+ var container = [
+    {key: "f", url: "https://www.facebook.com/"},
+    {key: "m", url: "https://www.messenger.com"},
+    {key: "w", url: "https://web.whatsapp.com/"},
+    {key: "i", url: "https://www.instagram.com/"},
+    {key: "y", url: "https://www.youtube.com/", search: "results?search_query="},
+    {key: "t", url: "https://www.tumblr.com/"},
+    {key: "li", url: "https://www.linkedin.com/"},
+    {key: "g", url: "https://github.com/", search: "search?q="},
+    {key: "gd", url: "https://drive.google.com/", search: "drive/search?q="},
+    {key: "gm", url: "https://mail.google.com/", search: "mail/u/0/#search/"},
+    {key: "t", url: "https://www.twitter.com/"},
+    {key: "s", url: "https://play.spotify.com/"},
+    {key: "bb", url: "https://portal.utoronto.ca/"},
+    {key: "sl", url: "https://www.sharelatex.com/"},
+    {key: "a", url: "https://acorn.utoronto.ca/"},
+    {key: "um", url: "https://mail.utoronto.ca/"},
+    {key: "tt", url: "https://student.utm.utoronto.ca/timetable/"},
+    {key: "pi", url: "https://piazza.com/"},
+    {key: "pey", url: "https://uoftengcareerportal.ca/students/login.htm"}
+];
 		
 function get_url()
 {
     var input = document.getElementById("search").value;
-    for (var i = 0; i < config.length; i++){
-        if (input.substr(0,2) === 'p:'){
-            return "http://www.primewire.ag/index.php?search_keywords=" + encodeURIComponent(input.substr(2,input.length-1)); 
-        }
-        if (config[i].key === input){
-            return config[i].url;
-        }
+    var test = goThroughOptions(input, config);
+    if (test != false) return test;
+    var test = goThroughOptions(input, container);
+    if (test != false) return test;
+    var prime = input.split(":");
+    if (prime[0] === "p") {
+        return get_primewire(prime[1]);
     }
-    return "https://google.com/search?q=" + encodeURIComponent(document.getElementById("search").value);
+    return "https://google.com/search?q=" + encodeURIComponent(input);
 }
 
-function get_primewire()
+function goThroughOptions(input, lst){
+    var split = input.split(":")
+    for (var i = 0; i < lst.length; i++){
+        if (split[0] != input && split[0] === lst[i].key){
+            return lst[i].url + lst[i].search + encodeURIComponent(split[1])
+        }
+        if (input === lst[i].key){
+            return lst[i].url;
+        }
+    }
+    return false;
+}
+
+function get_primewire(input)
 {
-    return "http://www.primewire.ag/index.php?search_keywords=" + document.getElementById("primewireSearch").value.split(' ').join('+') + "&key=8d2666e16e24701a&search_section=2";
+    return "http://www.primewire.ag/index.php?search_keywords=" + encodeURIComponent(input) + "&key=8d2666e16e24701a&search_section=2";
 }
 
 function clock() {// We create a new Date object and assign it to a variable called "time".
