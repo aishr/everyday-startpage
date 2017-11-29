@@ -17,13 +17,11 @@ $(document).ready(function(){
       $('#search_submit').click();
     });
 });
-
 window.onkeydown = function (e) {
-    if (!e) e = window.event;
-    if (!e.metaKey) {
-        if(e.keyCode >= 65 && event.keyCode <= 90 || e.keyCode >= 48 && event.keyCode <= 57) {
+    e = e || window.event || {};
+    var charCode = e.charCode || e.keyCode || e.which;
+    if(charCode >= 65 && charCode <= 90 || charCode >= 48 && charCode <= 57) {
             $('#search').focus();
-        }
     }
 }
 
