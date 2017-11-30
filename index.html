@@ -1,80 +1,61 @@
 <!DOCTYPE html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="scripts.js"></script>
-<style>
-/*@import "compass/css3";
-  @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);*/
-
-</style>
 <html>
-	<head>
-		<title>Startpage</title>
+    <head>
+        <title>Startpage</title>
         <link rel="stylesheet" href="styles.css">
-	</head>
-
-	<body>
-        <!--
-		<div class="marks">
-			<a href="https://docs.google.com/spreadsheets/d/1xVwISSWXJJKRenIa2uEx2CcAih7aZF1dAVuTif9UvTs/edit?usp=sharing">
-				<img title="Marks" src="images/trollface.png" alt="marks" align="left" style="width:20px;height:20px;">
-			</a> 
-		</div>
-		<div class="listdiv">
-			<h2>Quick Links</h2>
-			<ul class="topul">
-				<li class="topli"><a href="www.primewire.ag">Movies</a></li>
-			</ul>
-		</div>
-	    -->	
-		<div class="listdiv">
-			<h2>Quick Links</h2>
-			<ul class="topul">
-                            <li class="topli"><a href="http://www.primewire.ag/watch-5194-Psych-online-free"><div class="textLabels">ps</div>Psych</a></li>
-                            <li class="topli"><a href="http://www.primewire.ag/watch-2742941-Rick-and-Morty-online-free"><div class="textLabels">rm</div>Rick And Morty</a></li>
-                            <li class="topli"><a href="http://www.primewire.ag/watch-9594-The-Big-Bang-Theory-online-free"><div class="textLabels">tbbt</div>The Big Bang Theory</a></li>
-                            <li class="topli"><a href="http://www.primewire.ag/watch-2741621-Brooklyn-Nine-Nine-online-free"><div class="textLabels">b99</div>Brooklyn Nine-Nine</a></li>
-                            <li class="topli"><a href="http://www.primewire.ag/watch-2746666-The-Flash-online-free"><div class="textLabels">fl</div>The Flash</a></li>
-                            <li class="topli"><a href="http://www.primewire.ag/watch-2772173-Shadowhunters-online-free"><div class="textLabels">sh</div>Shadowhunters</a></li>
-                            <li class="topli"><a href="http://www.primewire.ag/watch-2724131-Suits-online-free"><div class="textLabels">su</div>Suits</a></li>
-                            <li class="topli"><a href="http://www.primewire.ag/watch-2768917-Quantico-online-free"><div class="textLabels">qu</div>Quantico</a></li>
-                            <li class="topli"><a href="http://www.primewire.ag/watch-2779641-Stranger-Things-online-free"><div class="textLabels">st</div>Stranger Things</a></li>
-			</ul>
+    </head>
+    <body>
+        <div class="listdiv">
+            <h2>Quick Links</h2>
+            <ul class="topul">
+                <li class="topli"><a href="http://www.primewire.ag/watch-5194-Psych-online-free"><div class="textLabels">ps</div>Psych</a></li>
+                <li class="topli"><a href="http://www.primewire.ag/watch-2742941-Rick-and-Morty-online-free"><div class="textLabels">rm</div>Rick And Morty</a></li>
+                <li class="topli"><a href="http://www.primewire.ag/watch-9594-The-Big-Bang-Theory-online-free"><div class="textLabels">tbbt</div>The Big Bang Theory</a></li>
+                <li class="topli"><a href="http://www.primewire.ag/watch-2741621-Brooklyn-Nine-Nine-online-free"><div class="textLabels">b99</div>Brooklyn Nine-Nine</a></li>
+                <li class="topli"><a href="http://www.primewire.ag/watch-2746666-The-Flash-online-free"><div class="textLabels">fl</div>The Flash</a></li>
+                <li class="topli"><a href="http://www.primewire.ag/watch-2772173-Shadowhunters-online-free"><div class="textLabels">sh</div>Shadowhunters</a></li>
+                <li class="topli"><a href="http://www.primewire.ag/watch-2724131-Suits-online-free"><div class="textLabels">su</div>Suits</a></li>
+                <li class="topli"><a href="http://www.primewire.ag/watch-2768917-Quantico-online-free"><div class="textLabels">qu</div>Quantico</a></li>
+                <li class="topli"><a href="http://www.primewire.ag/watch-2779641-Stranger-Things-online-free"><div class="textLabels">st</div>Stranger Things</a></li>
+            </ul>
         </div>
-		<div class="wrap">
-			<form onsubmit="window.location.href = get_url(); return false;" autocomplete="on">
-				<input id="search" name="search" type="text" placeholder="Search Here!">
-				<input id="search_submit" value="Rechercher" type="submit">
-			</form>
-		</div>
-                <time class="clock"></time>
-                <div class="box">
-                    <div class="date">
-                        <div id="daymonth"></div>
-                        <div id="year"></div>
-                    </div>
-                </div>
-                <div id="dockContainer">
-			<ul class="osx-dock">
-				<li class="active"><a href="https://www.facebook.com/"> <img title="Facebook" src="images/fblogo.png" alt="fb" align="left" style="width:50px;height:50px;"> <div class="centered">fb</div> </a></li>
-				<li><a href="https://www.messenger.com"> <img title="Messenger" src="images/msngrlogo.png" alt="m" align="left" style="width:50px;height:50px;"> <div class="centered">m</div> </a></li>
-				<li><a href="https://web.whatsapp.com/"> <img title="Whatsapp" src="images/whatsapp.png" alt="wa" align="left" style="width:50px;height:50px;"><div class="centered">wa</div> </a></li>
-                		<li><a href="https://www.instagram.com/"> <img title="Instagram" src="images/instagram.png" alt="i" align="left" style="width:50px;height:50px;"><div class="centered">i</div> </a></li>
-				<li><a href="https://www.youtube.com/"> <img title="YouTube" src="images/ytlogo.png" alt="yt" align="left" style="width:50px;height:50px;"><div class="centered">yt</div> </a></li>
-				<li><a href="https://www.tumblr.com/"> <img title="Tumblr" src="images/tumblrlogo.png" alt="t" align="left" style="width:50px;height:50px;"><div class="centered">t</div> </a></li>
-				<li><a href="https://www.linkedin.com"/> <img title="LinkedIn" src="images/linkedinlogo.png" alt="li" align="left" style="width:50px;height:50px;"><div class="centered">li</div> </a></li>
-                		<li><a href="https://github.com/"> <img title="Github" src="images/githublogo.png" alt="gh" align="left" style="width:50px;height:50px;"><div class="centered">gh</div> </a></li>
-				<li><a href="https://drive.google.com/"> <img title="Drive" src="images/drivelogo.png" alt="gd" align="left" style="width:50px;height:50px;"><div class="centered">gd</div> </a></li>
-				<li><a href="https://mail.google.com/"> <img title="Gmail" src="images/gmaillogo.png" alt="gm" align="left" style="width:50px;height:50px;"><div class="centered">gm</div> </a></li>
-				<li><a href="https://www.twitter.com/"> <img title="Twitter" src="images/twitter.png" alt="tt" align="left" style="width:50px;height:50px;"><div class="centered">tt</div> </a></li>
-				<li><a href="https://play.spotify.com/"> <img title="Spotify" src="images/spotifiy.png" alt="s" align="left" style="width:50px;height:50px;"><div class="centered">s</div> </a></li>
-				<li><a href="https://portal.utoronto.ca/"> <img title="Portal" src="images/bblogo.png" alt="bb" align="left" style="width:50px;height:50px;"><div class="centered">bb</div> </a></li>
-				<li><a href="https://www.sharelatex.com/"> <img title="ShareLatex" src="images/sllogo.png" alt="sl" align="left" style="width:50px;height:50px;"><div class="centered">sl</div> </a></li>
-				<li><a href="https://acorn.utoronto.ca/"> <img title="Acorn" src="images/acornlogo.png" alt="a" align="left" style="width:50px;height:50px;"><div class="centered">a</div> </a></li>
-				<li><a href="https://mail.utoronto.ca/"> <img title="UTORMail" src="images/mail.png" alt="utm" align="left" style="width:50px;height:50px;"><div class="centered">utm</div> </a></li>
-                		<li><a href="https://student.utm.utoronto.ca/timetable/"> <img title="Timetable" src="images/utmlogo.png" alt="tt" align="left" style="width:50px;height:50px;"><div class="centered">tt</div> </a></li>
-                		<li><a href="https://piazza.com/"> <img title="Piazza" src="images/piazzalogo.png" alt="pi" align="left" style="width:50px;height:50px;"><div class="centered">pi</div> </a></li>
-				<li><a href="https://uoftengcareerportal.ca/students/login.htm"> <img title="PEY Portal" src="images/ecc.png" alt="pey" align="left" style="width:50px;height:50px;"><div class="centered">pey</div> </a></li>
-			</ul>
-		</div>
-	</body>
+        <div class="wrap">
+            <form onsubmit="window.location.href = get_url(); return false;" autocomplete="on">
+                <input id="search" name="search" type="text" placeholder="Search Here!">
+                <input id="search_submit" value="Rechercher" type="submit">
+            </form>
+        </div>
+        <time class="clock"></time>
+        <div class="box">
+            <div class="date">
+                <div id="daymonth"></div>
+                <div id="year"></div>
+            </div>
+        </div>
+        <div id="dockContainer">
+            <ul class="osx-dock">
+                <li class="active"><a href="https://www.facebook.com/"> <img title="Facebook" src="images/fblogo.png" alt="fb" align="left" style="width:50px;height:50px;"> <div class="centered">fb</div> </a></li>
+                <li><a href="https://www.messenger.com"> <img title="Messenger" src="images/msngrlogo.png" alt="m" align="left" style="width:50px;height:50px;"> <div class="centered">m</div> </a></li>
+                <li><a href="https://web.whatsapp.com/"> <img title="Whatsapp" src="images/whatsapp.png" alt="wa" align="left" style="width:50px;height:50px;"><div class="centered">wa</div> </a></li>
+                <li><a href="https://www.instagram.com/"> <img title="Instagram" src="images/instagram.png" alt="i" align="left" style="width:50px;height:50px;"><div class="centered">i</div> </a></li>
+                <li><a href="https://www.youtube.com/"> <img title="YouTube" src="images/ytlogo.png" alt="yt" align="left" style="width:50px;height:50px;"><div class="centered">yt</div> </a></li>
+                <li><a href="https://www.tumblr.com/"> <img title="Tumblr" src="images/tumblrlogo.png" alt="t" align="left" style="width:50px;height:50px;"><div class="centered">t</div> </a></li>
+                <li><a href="https://www.linkedin.com"/> <img title="LinkedIn" src="images/linkedinlogo.png" alt="li" align="left" style="width:50px;height:50px;"><div class="centered">li</div> </a></li>
+                <li><a href="https://github.com/"> <img title="Github" src="images/githublogo.png" alt="gh" align="left" style="width:50px;height:50px;"><div class="centered">gh</div> </a></li>
+                <li><a href="https://drive.google.com/"> <img title="Drive" src="images/drivelogo.png" alt="gd" align="left" style="width:50px;height:50px;"><div class="centered">gd</div> </a></li>
+                <li><a href="https://mail.google.com/"> <img title="Gmail" src="images/gmaillogo.png" alt="gm" align="left" style="width:50px;height:50px;"><div class="centered">gm</div> </a></li>
+                <li><a href="https://www.twitter.com/"> <img title="Twitter" src="images/twitter.png" alt="tt" align="left" style="width:50px;height:50px;"><div class="centered">tt</div> </a></li>
+                <li><a href="https://play.spotify.com/"> <img title="Spotify" src="images/spotifiy.png" alt="s" align="left" style="width:50px;height:50px;"><div class="centered">s</div> </a></li>
+                <li><a href="https://portal.utoronto.ca/"> <img title="Portal" src="images/bblogo.png" alt="bb" align="left" style="width:50px;height:50px;"><div class="centered">bb</div> </a></li>
+                <li><a href="https://www.sharelatex.com/"> <img title="ShareLatex" src="images/sllogo.png" alt="sl" align="left" style="width:50px;height:50px;"><div class="centered">sl</div> </a></li>
+                <li><a href="https://acorn.utoronto.ca/"> <img title="Acorn" src="images/acornlogo.png" alt="a" align="left" style="width:50px;height:50px;"><div class="centered">a</div> </a></li>
+                <li><a href="https://mail.utoronto.ca/"> <img title="UTORMail" src="images/mail.png" alt="utm" align="left" style="width:50px;height:50px;"><div class="centered">utm</div> </a></li>
+                <li><a href="https://student.utm.utoronto.ca/timetable/"> <img title="Timetable" src="images/utmlogo.png" alt="tt" align="left" style="width:50px;height:50px;"><div class="centered">tt</div> </a></li>
+                <li><a href="https://piazza.com/"> <img title="Piazza" src="images/piazzalogo.png" alt="pi" align="left" style="width:50px;height:50px;"><div class="centered">pi</div> </a></li>
+                <li><a href="https://uoftengcareerportal.ca/students/login.htm"> <img title="PEY Portal" src="images/ecc.png" alt="pey" align="left" style="width:50px;height:50px;"><div class="centered">pey</div> </a></li>
+            </ul>
+        </div>
+    </body>
 </html>
