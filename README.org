@@ -1,1 +1,2 @@
-* Everyday Startpage 
+* Everyday Startpage
+Hosted on https://aishr.github.io/everyday-startpage/
