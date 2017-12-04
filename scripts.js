@@ -26,52 +26,55 @@ window.onkeydown = function (e) {
     }
 }
 
-var config = [
-    {key: 'ps', name: 'Psych', url: 'http://www.primewire.ag/watch-5194-Psych-online-free'},
-    {key: 'rm', name: 'Rick And Morty', url: 'http://www.primewire.ag/watch-2742941-Rick-and-Morty-online-free'},
-    {key: 'tbbt', name: 'The Big Bang Theory', url: 'http://www.primewire.ag/watch-9594-The-Big-Bang-Theory-online-free'},
-    {key: 'b99', name: 'Brooklyn Nine Nine', url: 'http://www.primewire.ag/watch-2741621-Brooklyn-Nine-Nine-online-free'},
-    {key: 'fl', name: 'The Flash', url: 'http://www.primewire.ag/watch-2746666-The-Flash-online-free'},
-    {key: 'sh', name: 'Shadowhunters', url: 'http://www.primewire.ag/watch-2746666-The-Flash-online-free'},
-    {key: 'su', name: 'Suits', url: 'http://www.primewire.ag/watch-2724131-Suits-online-free'},
-    {key: 'qu', name: 'Quantico', url: 'http://www.primewire.ag/watch-2768917-Quantico-online-free'},
-    {key: 'st', name: 'Stanger Things', url: 'http://www.primewire.ag/watch-2779641-Stranger-Things-online-free'},
-
-];
-
- var container = [
-    {key: "f", url: "https://www.facebook.com/"},
-    {key: "m", url: "https://www.messenger.com"},
-    {key: "w", url: "https://web.whatsapp.com/"},
-    {key: "i", url: "https://www.instagram.com/"},
-    {key: "y", url: "https://www.youtube.com/", search: "results?search_query="},
-    {key: "t", url: "https://www.tumblr.com/"},
-    {key: "li", url: "https://www.linkedin.com/"},
-    {key: "g", url: "https://github.com/", search: "search?q="},
-    {key: "gd", url: "https://drive.google.com/", search: "drive/search?q="},
-    {key: "gm", url: "https://mail.google.com/", search: "mail/u/0/#search/"},
-    {key: "t", url: "https://www.twitter.com/"},
-    {key: "s", url: "https://play.spotify.com/"},
-    {key: "bb", url: "https://portal.utoronto.ca/"},
-    {key: "sl", url: "https://www.sharelatex.com/"},
-    {key: "a", url: "https://acorn.utoronto.ca/"},
-    {key: "um", url: "https://mail.utoronto.ca/"},
-    {key: "tt", url: "https://student.utm.utoronto.ca/timetable/"},
-    {key: "pi", url: "https://piazza.com/"},
-    {key: "pey", url: "https://uoftengcareerportal.ca/students/login.htm"}
-];
+var config = {
+    links: [
+        {key: 'ps', name: 'Psych', url: 'http://www.primewire.ag/watch-5194-Psych-online-free'},
+        {key: 'rm', name: 'Rick And Morty', url: 'http://www.primewire.ag/watch-2742941-Rick-and-Morty-online-free'},
+        {key: 'tbbt', name: 'The Big Bang Theory', url: 'http://www.primewire.ag/watch-9594-The-Big-Bang-Theory-online-free'},
+        {key: 'b99', name: 'Brooklyn Nine Nine', url: 'http://www.primewire.ag/watch-2741621-Brooklyn-Nine-Nine-online-free'},
+        {key: 'fl', name: 'The Flash', url: 'http://www.primewire.ag/watch-2746666-The-Flash-online-free'},
+        {key: 'sh', name: 'Shadowhunters', url: 'http://www.primewire.ag/watch-2746666-The-Flash-online-free'},
+        {key: 'su', name: 'Suits', url: 'http://www.primewire.ag/watch-2724131-Suits-online-free'},
+        {key: 'qu', name: 'Quantico', url: 'http://www.primewire.ag/watch-2768917-Quantico-online-free'},
+        {key: 'st', name: 'Stanger Things', url: 'http://www.primewire.ag/watch-2779641-Stranger-Things-online-free'},
+    ],
+    dock: [
+        {key: "f", url: "https://www.facebook.com/"},
+        {key: "m", url: "https://www.messenger.com"},
+        {key: "w", url: "https://web.whatsapp.com/"},
+        {key: "i", url: "https://www.instagram.com/"},
+        {key: "y", url: "https://www.youtube.com/", search: "results?search_query="},
+        {key: "t", url: "https://www.tumblr.com/"},
+        {key: "li", url: "https://www.linkedin.com/"},
+        {key: "g", url: "https://github.com/", search: "search?q="},
+        {key: "gd", url: "https://drive.google.com/", search: "drive/search?q="},
+        {key: "gm", url: "https://mail.google.com/", search: "mail/u/0/#search/"},
+        {key: "t", url: "https://www.twitter.com/"},
+        {key: "s", url: "https://play.spotify.com/"},
+        {key: "bb", url: "https://portal.utoronto.ca/"},
+        {key: "sl", url: "https://www.sharelatex.com/"},
+        {key: "a", url: "https://acorn.utoronto.ca/"},
+        {key: "um", url: "https://mail.utoronto.ca/"},
+        {key: "tt", url: "https://student.utm.utoronto.ca/timetable/"},
+        {key: "pi", url: "https://piazza.com/"},
+        {key: "pey", url: "https://uoftengcareerportal.ca/students/login.htm"}
+    ],
+    extras: {
+        urlRegex: /^(?:(http|https)?:\/\/)?(?:[\w-]+\.)+([a-z]|[A-Z]|[0-9]){2,6}/i,
+        protocolRegex: /^[a-zA-Z]+:\/\//i
+    }
+};
 		
 function get_url()
 {
     var input = document.getElementById("search").value;
-    var test = goThroughOptions(input, config);
-    if (test != false) return test;
-    var test = goThroughOptions(input, container);
-    if (test != false) return test;
-    var prime = input.split(":");
-    if (prime[0] === "p") {
-        return get_primewire(prime[1]);
+    if (input.match(config.extras.urlRegex)){
+        return input.match(config.extras.protocolRegex) ? input : "http://" + input;
     }
+    var test = goThroughOptions(input, config.links);
+    if (test != false) return test;
+    var test = goThroughOptions(input, config.dock);
+    if (test != false) return test;
     return "https://google.com/search?q=" + encodeURIComponent(input);
 }
 
