@@ -57,7 +57,8 @@ var config = {
         {key: "um", url: "https://mail.utoronto.ca/"},
         {key: "tt", url: "https://student.utm.utoronto.ca/timetable/"},
         {key: "pi", url: "https://piazza.com/"},
-        {key: "pey", url: "https://uoftengcareerportal.ca/students/login.htm"}
+        {key: "pey", url: "https://uoftengcareerportal.ca/students/login.htm"},
+        {key: "p", url: "http://www.primewire.ag/", search: "index.php?search_keywords="}
     ],
     extras: {
         urlRegex: /^(?:(http|https)?:\/\/)?(?:[\w-]+\.)+([a-z]|[A-Z]|[0-9]){2,6}/i,
