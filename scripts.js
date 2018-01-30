@@ -49,13 +49,13 @@ var config = {
         {key: "g", url: "https://github.com/", search: "search?q="},
         {key: "gd", url: "https://drive.google.com/", search: "drive/search?q="},
         {key: "gm", url: "https://mail.google.com/", search: "mail/u/0/#search/"},
-        {key: "t", url: "https://www.twitter.com/"},
+        {key: "tt", url: "https://www.twitter.com/"},
         {key: "s", url: "https://play.spotify.com/"},
         {key: "bb", url: "https://portal.utoronto.ca/"},
         {key: "sl", url: "https://www.sharelatex.com/"},
         {key: "a", url: "https://acorn.utoronto.ca/"},
         {key: "um", url: "https://mail.utoronto.ca/"},
-        {key: "tt", url: "https://student.utm.utoronto.ca/timetable/"},
+        {key: "utt", url: "https://student.utm.utoronto.ca/timetable/"},
         {key: "pi", url: "https://piazza.com/"},
         {key: "pey", url: "https://uoftengcareerportal.ca/students/login.htm"},
         {key: "p", url: "http://www.primewire.ag/", search: "index.php?search_keywords="}
@@ -90,11 +90,6 @@ function goThroughOptions(input, lst){
         }
     }
     return false;
-}
-
-function get_primewire(input)
-{
-    return "http://www.primewire.ag/index.php?search_keywords=" + encodeURIComponent(input) + "&key=8d2666e16e24701a&search_section=2";
 }
 
 function clock() {// We create a new Date object and assign it to a variable called "time".
