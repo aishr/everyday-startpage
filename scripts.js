@@ -136,7 +136,7 @@ function getDate()
     var date = new Date(),
     year = date.getFullYear(),
     month = date.getMonth(),
-    day = date.getUTCDate(),
+    day = date.getDate(),
     months = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
     document.getElementById('daymonth').innerHTML = months[month] + " " + day + "th,";
