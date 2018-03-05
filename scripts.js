@@ -139,7 +139,7 @@ function getDate()
     day = date.getDate(),
     months = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
-    document.getElementById('daymonth').innerHTML = months[month] + " " + day + "th,";
+    document.getElementById('daymonth').innerHTML = months[month] + " " + day + ",";
     document.getElementById('year').innerHTML = year;
 }
 setInterval(getDate, 1000);
