@@ -28,15 +28,6 @@ window.onkeydown = function (e) {
 
 var config = {
     links: [
-        {key: 'ps', name: 'Psych', url: 'http://www.primewire.ag/watch-5194-Psych-online-free'},
-        {key: 'rm', name: 'Rick And Morty', url: 'http://www.primewire.ag/watch-2742941-Rick-and-Morty-online-free'},
-        {key: 'tbbt', name: 'The Big Bang Theory', url: 'http://www.primewire.ag/watch-9594-The-Big-Bang-Theory-online-free'},
-        {key: 'b99', name: 'Brooklyn Nine Nine', url: 'http://www.primewire.ag/watch-2741621-Brooklyn-Nine-Nine-online-free'},
-        {key: 'fl', name: 'The Flash', url: 'http://www.primewire.ag/watch-2746666-The-Flash-online-free'},
-        {key: 'sh', name: 'Shadowhunters', url: 'http://www.primewire.ag/watch-2746666-The-Flash-online-free'},
-        {key: 'su', name: 'Suits', url: 'http://www.primewire.ag/watch-2724131-Suits-online-free'},
-        {key: 'qu', name: 'Quantico', url: 'http://www.primewire.ag/watch-2768917-Quantico-online-free'},
-        {key: 'st', name: 'Stanger Things', url: 'http://www.primewire.ag/watch-2779641-Stranger-Things-online-free'},
     ],
     dock: [
         {key: "fb", url: "https://www.facebook.com/"},
